@@ -325,15 +325,6 @@ router.post('/logger', loggerController.setLogger);
 router.put('/codesInfluencers/:id', linkController.updateCodesInfluencers);
 //Get link user
 router.get('/linkUser/:id', linkController.getLinkUser);
-//Get types
-router.get('/getType/:id', linkController.getType);
-//Post link
-router.post('/link', middleware.validatedIP, linkController.postLink);
-router.delete('/link/:id', middleware.validatedIP, linkController.deleteLink);
-router.put('/link/:id', middleware.validatedIP, linkController.updateLink);
-router.get('/link-validate/:link', linkController.linkValidate);
-router.get('/user-id/:email', linkController.getUserId);
-router.post('/link-associated', linkController.linkAssociated);
-router.get('/link-associated/:user_id', middleware.validatedIP, linkController.getLinkAssociated);
+
 
 module.exports = router
